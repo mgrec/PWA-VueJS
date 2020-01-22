@@ -33,21 +33,21 @@
 
     @Component
     export default class Search extends Vue {
-        baseUrl = 'http://openlibrary.org';
-        books = [];
-        query = '';
+        public baseUrl = 'http://openlibrary.org';
+        public books = [];
+        public query = '';
 
-        async search() {
+        public async search() {
             const response = await axios.get(this.baseUrl + `/search.json?title=${this.query}`);
             this.books = await response.data.docs;
         }
 
-        viewDetails(book: any) {
+        public viewDetails(book: any) {
             this.$router.push({ path: 'details', query: {
                     title: book.title,
                     authors: book.author_name && book.author_name.join(', '),
                     year: book.first_publish_year,
-                    cover_id: book.cover_edition_key
+                    cover_id: book.cover_edition_key,
                 }});
         }
     }
