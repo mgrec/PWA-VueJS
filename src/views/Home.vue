@@ -1,6 +1,28 @@
 <template>
   <div class="home">
     <h1>Vue Books PWA</h1>
-    <h2>A simple progressive web application</h2>
+    <h2>Une application web simple et progressive</h2>
+    <p>Vous pouvez rechercher un livre</p>
+    <router-link to="/search" class="btn-search">Rechercher</router-link>
   </div>
 </template>
+<style>
+  h2 {
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+  .btn-search {
+    margin-left: 20px;
+    background-color: aquamarine;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+</style>

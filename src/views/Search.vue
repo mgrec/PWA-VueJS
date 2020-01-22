@@ -33,7 +33,7 @@
 
     @Component
     export default class Search extends Vue {
-        baseUrl = 'http://openlibrary.org';
+        baseUrl = 'https://openlibrary.org';
         books = [];
         query = '';
 
@@ -73,5 +73,8 @@
     margin-top: 0;
     margin-bottom: 0;
     border-radius: 0;
+  }
+  .md-field.input-group-field.md-theme-default {
+    margin-left: 20px;
   }
 </style>
