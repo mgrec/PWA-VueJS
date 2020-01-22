@@ -1,11 +1,9 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from '../views/Home.vue'
-import Search from '../views/Search.vue'
-import Details from '../views/Details.vue'
-
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from '../views/Home.vue';
+import Search from '../views/Search.vue';
+import Details from '../views/Details.vue';
 Vue.use(Router);
-
 const router = new Router({
     mode: 'history',
     routes: [
@@ -26,5 +24,5 @@ const router = new Router({
         }
     ]
 });
-
 export default router;
+//# sourceMappingURL=index.js.map
