@@ -17,10 +17,10 @@
 </template>
 
 <script lang="ts">
-    import Vue from 'vue'
+    import Vue from 'vue';
 
     export default class App extends Vue {
-        title = "Vue Books";
+        public title = 'Vue Books';
     }
 </script>
 

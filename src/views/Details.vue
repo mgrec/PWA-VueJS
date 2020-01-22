@@ -19,19 +19,19 @@
 
     @Component
     export default class Details extends Vue {
-        book: any;
+        public book: any;
 
-        created() {
+        public created() {
             this.book = {
                 title: this.$route.query.title,
                 cover_id: this.$route.query.cover_id,
                 authors: this.$route.query.authors,
-                year: this.$route.query.year
+                year: this.$route.query.year,
             };
         }
 
-        getImageSrc() {
-            return "http://covers.openlibrary.org/b/OLID/" + this.book.cover_id + "-M.jpg";
+        public getImageSrc() {
+            return 'http://covers.openlibrary.org/b/OLID/' + this.book.cover_id + '-M.jpg';
         }
     }
 </script>
