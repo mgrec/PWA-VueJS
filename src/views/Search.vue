@@ -33,10 +33,9 @@
 
     @Component
     export default class Search extends Vue {
-        public baseUrl = 'https://openlibrary.org';
-        public books = [];
-        public query = '';
-
+      public baseUrl = 'https://openlibrary.org';
+      public books = [];
+      public query = '';
         public async search() {
             const response = await axios.get(this.baseUrl + `/search.json?title=${this.query}`);
             this.books = await response.data.docs;
@@ -73,5 +72,8 @@
     margin-top: 0;
     margin-bottom: 0;
     border-radius: 0;
+  }
+  .md-field.input-group-field.md-theme-default {
+    margin-left: 20px;
   }
 </style>
