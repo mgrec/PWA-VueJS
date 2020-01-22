@@ -33,7 +33,7 @@
 
     @Component
     export default class Search extends Vue {
-        public baseUrl = 'http://openlibrary.org';
+        public baseUrl = 'https://openlibrary.org';
         public books = [];
         public query = '';
 
