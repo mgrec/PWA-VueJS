@@ -4,6 +4,8 @@
       <span class="branding">
         <md-button><router-link to="/">{{ title }}</router-link></md-button>
       </span>
+      <md-button v-if="authenticated" v-on:click="logout" id="logout-button"> Logout </md-button>
+      <md-button v-else v-on:click="$auth.loginRedirect()" id="login-button"> Login </md-button>
       <md-menu md-direction="bottom-start">
         <md-button md-menu-trigger><md-icon>menu</md-icon></md-button>
         <md-menu-content>
@@ -17,10 +19,29 @@
 </template>
 
 <script lang="ts">
-    import Vue from 'vue';
+    import { Component, Vue, Watch } from 'vue-property-decorator';
 
+    @Component
     export default class App extends Vue {
-        public title = 'Vue Books';
+        title = "Vue Books";
+        public authenticated: boolean = false;
+
+        private created() {
+            this.isAuthenticated();
+        }
+
+        @Watch('$route')
+        private async isAuthenticated() {
+            this.authenticated = await this.$auth.isAuthenticated();
+        }
+
+        private async logout() {
+            await this.$auth.logout();
+            await this.isAuthenticated();
+
+            // Navigate back to home
+            this.$router.push({path: '/'});
+        }
     }
 </script>
 
