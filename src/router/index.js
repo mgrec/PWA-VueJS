@@ -4,16 +4,12 @@ import Home from '../views/Home.vue';
 import Search from '../views/Search.vue';
 import Details from '../views/Details.vue';
 import Auth from '@okta/okta-vue';
-
 Vue.use(Router);
-
 Vue.use(Auth, {
     issuer: 'https://dev-595700.okta.com/oauth2/default',
     client_id: '0oa11qneqCEtzS0914x6',
     redirect_uri: window.location.origin + '/implicit/callback',
 });
-
-
 const router = new Router({
     mode: 'history',
     routes: [
@@ -43,8 +39,7 @@ const router = new Router({
             component: Auth.handleCallback(),
         },
     ],
-
 });
-
 router.beforeEach(Vue.prototype.$auth.authRedirectGuard());
 export default router;
+//# sourceMappingURL=index.js.map
