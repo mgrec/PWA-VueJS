@@ -10,19 +10,19 @@ const router = new Router({
         {
             path: '/',
             name: 'home',
-            component: Home
+            component: Home,
         },
         {
             path: '/search',
             name: 'search',
-            component: Search
+            component: Search,
         },
         {
             path: '/details',
             name: 'details',
-            component: Details
-        }
-    ]
+            component: Details,
+        },
+    ],
 });
 export default router;
 //# sourceMappingURL=index.js.map

@@ -16,13 +16,17 @@
     margin-bottom: 30px;
     margin-left: 20px;
   }
-  .btn-search {
+  a.btn-search {
     margin-left: 20px;
-    background-color: aquamarine;
-    color: white;
+    background-color: #212121;
+    color: white !important;
     font-size: 20px;
-    padding: 5px;
+    padding: 5px 20px 5px 20px;
     border-radius: 5px;
     text-decoration: none;
+  }
+  a.btn-search:hover {
+    background-color: #212121;
+    color: white;
   }
 </style>
