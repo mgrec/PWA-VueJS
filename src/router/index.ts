@@ -40,7 +40,7 @@ const router = new Router({
         },
         {
             path: '/implicit/callback',
-            component: Auth.handleCallback()
+            component: Auth.handleCallback(),
         },
     ],
 

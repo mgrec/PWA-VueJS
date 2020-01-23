@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <h1>Vue Books PWA</h1>
-    <h2>Une application web simple et progressive</h2>
-    <p>Vous pouvez rechercher un livre</p>
-    <router-link to="/search" class="btn-search">Rechercher</router-link>
+    <h1>Book search application</h1>
+    <h2>A simple and progressive web application</h2>
+    <p>You can search for a book by searching for its title</p>
+    <router-link to="/search" class="btn-search">Search a book</router-link>
   </div>
 </template>
 <style>
